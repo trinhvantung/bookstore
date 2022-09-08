@@ -1,0 +1,35 @@
+// Here you can add other styles
+
+.sidebar-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.product_attrs {
+    &>div:nth-child(1) {
+        flex: 1;
+    }
+
+    &>div:nth-child(2) {
+        flex: 1;
+    }
+
+    &>div:nth-child(3) {
+        cursor: pointer;
+        color: red;
+        width: 32px;
+        text-align: center;
+    }
+}
+
+.ant-modal-wrap,
+.ant-modal-mask {
+    z-index: 100000 !important;
+}
+
+.ant-select-dropdown {
+    z-index: 10000000 !important;
+}
+
+.ant-notification {
+    z-index: 100000000 !important;
+}

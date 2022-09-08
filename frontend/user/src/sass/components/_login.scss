@@ -1,0 +1,75 @@
+.login {
+    // margin-top: 8px;
+    background-color: white;
+
+    &__content {
+        width: 400px;
+        margin: auto;
+        padding: 50px 0;
+    }
+
+    &__tab__list {
+        @include flex(center, space-between);
+        margin-bottom: 24px;
+    }
+
+    &__tab__button {
+        width: 45%;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        height: 30px;
+        font-size: 16px;
+
+        &::after {
+            transition: all 0.3s ease;
+            width: 0;
+            position: absolute;
+            content: "";
+            display: block;
+            height: 3px;
+            top: 100%;
+        }
+
+        &:hover {
+            color: $main-color;
+
+            &::after {
+                width: 100%;
+                background-color: $main-color;
+                top: 100%;
+            }
+        }
+
+        &.active {
+            color: $main-color;
+
+            &::after {
+                width: 100%;
+                background-color: $main-color;
+                top: 100%;
+            }
+        }
+    }
+
+    &__button {
+        @include flex(center, center);
+    }
+}
+
+.forgot-password__button {
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        color: $main-color;
+    }
+}
+
+.forgot-password__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 0 8px 0;
+}
